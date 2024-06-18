@@ -12,6 +12,9 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header styling */
@@ -20,6 +23,7 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    width: 100%;
 }
 
 header h1 {
@@ -50,11 +54,14 @@ nav ul li a:hover {
 /* Main and section styling */
 main {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 20px;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card {
@@ -62,20 +69,65 @@ main {
     padding: 10px;
     background: #e4e4e4;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .card img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    max-width: 200px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Footer styling */
 footer {
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 footer p {
     margin: 5px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

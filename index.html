@@ -7,7 +7,7 @@
     <meta name="author" content="Erick Montoya">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
     <title>WDD 131 - Dynamic Web Fundamentals - Erick Montoya</title>
@@ -26,20 +26,36 @@
     </header>
 
     <main>
-        <section class="card">
-            <h3>About Me</h3>
-            <p>I am Erick. I was born in El Salvador and have always lived in San Salvador city. I currently work in a call center taking calls. I like spending my time with my best friend playing video games and programming as a hobby.</p>
-        </section>
-        <section class="card">
-            <h4>El Salvador, San Salvador</h4>
-            <div>
-                <img src="images/el_salvador_flag.png" alt="El Salvador's flag">
-                <p>A beautiful country in Central America known for its scenic landscapes and vibrant culture. The population of El Salvador is approximately 6.5 million people (as of 2023). The capital and largest city is San Salvador, which is the political, cultural, and economic center of the nation. The population of San Salvador is around 1.1 million people, representing a significant portion of the country's total population.</p>
-            </div>
-        </section>
+        <div class="container">
+            <section class="card">
+                <h3>About Me</h3>
+                <img src="images/erick.jpg" width="100" we alt="Erick Montoya">
+                <p>Soy Erick. Nací en El Salvador y siempre he vivido en la ciudad de San Salvador. Actualmente trabajo en un centro de llamadas atendiendo llamadas. Me gusta pasar el tiempo con mi mejor amigo jugando videojuegos y programando como pasatiempo.</p>
+            </section>
+            <section class="card">
+                <h4>El Salvador, San Salvador</h4>
+                <div>
+                    <img src="images/el_salvador_flag.png" alt="Bandera de El Salvador">
+                    <p>Un hermoso país en América Central conocido por sus paisajes pintorescos y su vibrante cultura. La población de El Salvador es aproximadamente 6.5 millones de personas (a partir de 2023). La capital y ciudad más grande es San Salvador, que es el centro político, cultural y económico de la nación. La población de San Salvador es alrededor de 1.1 millones de personas, representando una porción significativa de la población total del país.</p>
+                </div>
+            </section>
+        </div>
+        <aside class="sidebar">
+            <h4>Web Dev Resources</h4>
+            <ul>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+                <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+            </ul>
+        </aside>
+
     </main>
 
-    <footer>  
+    <footer>
         <p>&copy; <span id="currentyear"></span> Erick Montoya, El Salvador</p>
         <p id="lastModified"></p>
     </footer>
