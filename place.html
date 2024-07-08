@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Erick Montoya">
+    <meta name="description" content="Information about Banff National Park">
+    <link rel="stylesheet" href="styles/place.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script> 
+    <script src="scripts/getdates.js" defer></script>
+    <title>Banff National Park</title>
+</head>
+<body class="font-sans bg-gray-100 text-gray-900">
+    <main class="max-w-7xl mx-auto p-5 relative-div">
+        <h1 class="text-4xl font-bold text-center mb-5">Banff National Park</h1>
+        <img src="./images/baff_national_park.jpg" alt="Banff National Park" class="w-full h-auto mb-5 rounded-lg">
+
+        <div class="grid grid-cols-1 gap-5">
+            <div class="bg-white p-5 mt-5 rounded-lg shadow-md overlay-div left">
+                <h4 class="text-2xl font-semibold mb-3">Data</h4>
+                <ul class="list-disc pl-5">
+                    <li>Area: 6,641 km²</li>
+                    <li>Population: ~10,000 (town of Banff)</li>
+                    <li>Capital: Ottawa (Canada)</li>
+                    <li>Languages: English, French</li>
+                    <li>Currency: Canadian Dollar (CAD)</li>
+                    <li>Time Zone: MST (UTC-7), MDT (UTC-6 in summer)</li>
+                    <li>Calling Code: +1</li>
+                    <li>Internet TLD: .ca</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-lg shadow-md overlay-div right">
+                <h4 class="text-2xl font-semibold mb-3">Weather</h4>
+                <ul class="list-disc pl-5">
+                    <li>Temperature: 15°C (current)</li>
+                    <li>Conditions: Partly Cloudy</li>
+                    <li>Wind: 10 km/h NW</li>
+                    <li>Wind Chill: 13°C</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center mt-10">
+        <p>&copy; <span id="currentyear"></span> Erick Montoya, El Salvador</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -7,94 +7,10 @@
 
 body {
     font-family: 'Roboto', sans-serif; /* Aplica la fuente aquí */
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-}
-
-h1 {
-    padding: 5px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-main {
-    text-align: center;
-    margin: 20px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 1000px;
-    margin: 20px auto;
 }
 
 .gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
     border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav {
-        flex-direction: column;
-        display: none;
-    }
-
-    nav a {
-        padding: 10px;
-        text-align: center;
-        width: 100%;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
 }
 
 footer {

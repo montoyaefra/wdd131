@@ -5,73 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="you will see the wonderful temples and this website"> 
     <meta name="author" content="Erick Montoya">
-    <link rel="stylesheet" href="styles/temples-large.css">
     <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Añadir Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script> <!-- Añadir Alpine.js para el menú de hamburguesa -->
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/temples.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Añadir Google Font -->
     <title>Document</title>
 </head>
-<body>
-    <header>
-       <h1>Temple</h1>
-       <nav>
-        <div class="menu-toggle"></div>
-        <a href="">Home</a>
-        <a href="">Old</a>
-        <a href="">New</a>
-        <a href="">large</a>
-        <a href="">Small</a>
+<body class="font-roboto bg-gray-100 text-gray-800">
+    <header class="bg-gray-800 text-white p-4 text-center relative">
+       <h1 class="text-3xl">Temple</h1>
+       <nav class="flex justify-center items-center mt-2 md:flex-row" x-data="{ open: false }">
+        <div class="md:hidden">
+            <button @click="open = !open" class="text-white text-2xl focus:outline-none">
+                &#9776;
+            </button>
+        </div>
+        <div :class="{'flex': open, 'hidden': !open}" class="flex-col md:flex-row md:flex md:items-center">
+            <a href="#" class="block px-4 py-2 md:py-0 md:inline md:px-2">Home</a>
+            <a href="#" class="block px-4 py-2 md:py-0 md:inline md:px-2">Old</a>
+            <a href="#" class="block px-4 py-2 md:py-0 md:inline md:px-2">New</a>
+            <a href="#" class="block px-4 py-2 md:py-0 md:inline md:px-2">Large</a>
+            <a href="#" class="block px-4 py-2 md:py-0 md:inline md:px-2">Small</a>
+        </div>
        </nav>
     </header>
 
-    <main>
-        <h2>Home</h2>
+    <main class="text-center m-5">
+        <h2 class="text-2xl mb-4">Home</h2>
+        <section class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
+            </figure>
 
-        <section class="gallery">
             <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
+                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple" class="w-full h-auto rounded-lg">
+                <figcaption class="mt-2">El Salvador Temple</figcaption>
             </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="./images/San-Salvador-El-Savador-Temple2.jpg" alt="elsavador_temple">
-                <figcaption>El Salvador Temple</figcaption>
-            </figure>
-            
-                
-
         </section>
     </main>
 
-    <footer>
+    <footer class="text-center mt-10">
         <p>&copy; <span id="currentyear"></span> Erick Montoya, El Salvador</p>
         <p id="lastModified"></p>
     </footer>
