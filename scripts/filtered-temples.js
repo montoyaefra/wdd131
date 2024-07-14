@@ -6,24 +6,46 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       window.templesData = data; 
-      displayTemples(data);
+      displayTemples(data); 
     })
     .catch(error => {
       console.error('Error fetching the JSON file:', error);
     });
 
-  $("#utah").addEventListener('click', (e) => {
+  
+  $("#old").addEventListener('click', (e) => {
     e.preventDefault();
-    const utahTemples = window.templesData.filter(temple => temple.location.includes('Utah'));
-    displayTemples(utahTemples);
+    const oldTemples = window.templesData.filter(temple => new Date(temple.dedicated).getFullYear() < 2000);
+    displayTemples(oldTemples);
   });
-});
 
-$("#home").addEventListener('click', (e) => {
+ 
+  $("#new").addEventListener('click', (e) => {
+    e.preventDefault();
+    const newTemples = window.templesData.filter(temple => new Date(temple.dedicated).getFullYear() >= 2000);
+    displayTemples(newTemples);
+  });
+
+  
+  $("#large").addEventListener('click', (e) => {
+    e.preventDefault();
+    const largeTemples = window.templesData.filter(temple => temple.area > 30000);
+    displayTemples(largeTemples);
+  });
+
+  
+  $("#small").addEventListener('click', (e) => {
+    e.preventDefault();
+    const smallTemples = window.templesData.filter(temple => temple.area <= 30000);
+    displayTemples(smallTemples);
+  });
+
+  
+  $("#home").addEventListener('click', (e) => {
     e.preventDefault();
     displayTemples(window.templesData);
   });
-
+});
 
 const displayTemples = (temples) => {
   const cards = $("#temple-cards");
@@ -58,3 +80,6 @@ const newCard = (temple) => {
 
   return div;
 };
+
+
+temples =[];
