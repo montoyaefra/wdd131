@@ -5,15 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('temples.json')
     .then(response => response.json())
     .then(data => {
+      window.templesData = data; 
       displayTemples(data);
     })
     .catch(error => {
       console.error('Error fetching the JSON file:', error);
     });
+
+  $("#utah").addEventListener('click', (e) => {
+    e.preventDefault();
+    const utahTemples = window.templesData.filter(temple => temple.location.includes('Utah'));
+    displayTemples(utahTemples);
+  });
 });
+
+$("#home").addEventListener('click', (e) => {
+    e.preventDefault();
+    displayTemples(window.templesData);
+  });
+
 
 const displayTemples = (temples) => {
   const cards = $("#temple-cards");
+  cards.innerHTML = ''; 
   temples.forEach(temple => {
     const card = newCard(temple);
     cards.appendChild(card);
@@ -22,14 +36,14 @@ const displayTemples = (temples) => {
 
 const newCard = (temple) => {
   const div = newE("div");
-  div.className = 'max-w-sm rounded overflow-hidden shadow-lg m-4'; // Tailwind CSS classes
+  div.className = 'max-w-sm rounded overflow-hidden shadow-lg m-4';
 
   const img = newE("img");
   img.className = 'w-full';
   img.src = temple.imageUrl;
   img.alt = temple.templeName;
   img.onerror = () => {
-    img.src = 'https://via.placeholder.com/400x250?text=Image+not+available'; // Placeholder image in case of error
+    img.src = 'https://via.placeholder.com/400x250?text=Image+not+available';
   };
 
   div.innerHTML = `
@@ -40,7 +54,7 @@ const newCard = (temple) => {
       <p class="text-gray-700 text-base">Area: ${temple.area} sq ft</p>
     </div>
   `;
-  div.insertBefore(img, div.firstChild); // Insert image before the text content
+  div.insertBefore(img, div.firstChild);
 
   return div;
 };
